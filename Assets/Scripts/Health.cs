@@ -8,7 +8,8 @@ public class Health : MonoBehaviour
     public AudioClip dieSound;
 
     public float maxHp = 10;
-    private float currentHp = 10;
+    [HideInInspector]
+    public float currentHp = 10;
     // Start is called before the first frame update
     void Start()
     {
