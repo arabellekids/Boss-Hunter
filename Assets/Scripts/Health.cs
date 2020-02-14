@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    public AudioClip hitSound;
+    public AudioClip dieSound;
+
     public float maxHp = 10;
     private float currentHp = 10;
     // Start is called before the first frame update
@@ -16,11 +19,13 @@ public class Health : MonoBehaviour
     {
         if(currentHp - dmg <= 0)
         {
+            AudioSource.PlayClipAtPoint(dieSound, transform.position,1);
             currentHp = 0;
             Destroy(gameObject);
         }
         else
         {
+            AudioSource.PlayClipAtPoint(hitSound, transform.position,1);
             currentHp -= dmg;
         }
     }

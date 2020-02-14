@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class PlayerShooter : MonoBehaviour
 {
+    public AudioClip fireSound;
+
     Animator anim;
     public GameObject bullet;
     public Transform bulletSpwnPos;
@@ -14,11 +16,11 @@ public class PlayerShooter : MonoBehaviour
     }
     private void Update()
     {
-        anim.SetBool("Firing", Input.GetAxis("Fire1") != 0);
+            anim.SetBool("Firing", Input.GetAxis("Fire1") != 0);
     }
     public void Fire()
     {
+        AudioSource.PlayClipAtPoint(fireSound, transform.position, 0.4f);
         Instantiate(bullet, bulletSpwnPos.position, bulletSpwnPos.rotation, null);
-        Debug.Log("Fired");
     }
 }
