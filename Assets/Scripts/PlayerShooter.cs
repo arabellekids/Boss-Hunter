@@ -16,7 +16,7 @@ public class PlayerShooter : MonoBehaviour
     }
     private void Update()
     {
-            anim.SetBool("Firing", Input.GetAxis("Fire1") != 0);
+            anim.SetBool("Firing", Input.GetButtonDown("Fire1"));
     }
     public void Fire()
     {

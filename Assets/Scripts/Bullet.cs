@@ -42,7 +42,7 @@ public class Bullet : MonoBehaviour
             Health targetHp = collision.gameObject.GetComponent<Health>();
             if(targetHp.currentHp < targetHp.maxHp / 3)
             {
-                Instantiate(hurtEffect, transform.position, transform.rotation, collision.transform);
+                Instantiate(hurtEffect, collision.GetContact(0).point, transform.rotation, collision.transform);
             }
             targetHp.TakeDamage(dmg);
         }

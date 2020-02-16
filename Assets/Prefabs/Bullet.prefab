@@ -94,9 +94,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hurtEffect: {fileID: 1000010823978654, guid: 3228a22491941734bb83ad691d17fcb9, type: 3}
-  lifeTime: 1.2
+  lifeTime: 5
   speed: 1000
-  dmg: 2
+  dmg: 50
 --- !u!54 &8915109432335350540
 Rigidbody:
   m_ObjectHideFlags: 0
