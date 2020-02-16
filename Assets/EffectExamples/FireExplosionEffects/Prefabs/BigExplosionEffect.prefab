@@ -14171,6 +14171,7 @@ GameObject:
   - component: {fileID: 198000012777718758}
   - component: {fileID: 199000010553669322}
   - component: {fileID: 5295709137849907873}
+  - component: {fileID: 1101236628515399013}
   m_Layer: 0
   m_Name: BigExplosionEffect
   m_TagString: Untagged
@@ -18836,6 +18837,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 4
+--- !u!114 &1101236628515399013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011797152326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1108f6cf310d4bc4794ecbc0c27fe371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionRange: 10
+  explosionForce: 10000
 --- !u!1 &1000012348499044
 GameObject:
   m_ObjectHideFlags: 0

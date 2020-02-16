@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &70172647 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5229935610902685748, guid: 9c56bd5566702bd4d9e20f71fd766413,
+    type: 3}
+  m_PrefabInstance: {fileID: 5229935611597292864}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &71660120
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,8 +240,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &101570449
@@ -418,8 +422,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!54 &114208830
@@ -579,8 +581,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &237016784
@@ -669,8 +669,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!54 &237281841
@@ -716,8 +714,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!54 &295443515
@@ -772,8 +768,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 1000
   maxHp: 2
   currentHp: 10
 --- !u!54 &330074451
@@ -784,7 +778,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330074449}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 30
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -990,8 +984,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!1 &431532643
@@ -1060,8 +1052,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &431532647
@@ -1123,6 +1113,130 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431532643}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &470705393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 470705399}
+  - component: {fileID: 470705398}
+  - component: {fileID: 470705397}
+  - component: {fileID: 470705396}
+  - component: {fileID: 470705395}
+  - component: {fileID: 470705394}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &470705394
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470705393}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &470705395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470705393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1a91ad4d3af5d448ec6476e3d337df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 10
+  explosion: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
+--- !u!135 &470705396
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470705393}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &470705397
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470705393}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &470705398
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470705393}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &470705399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470705393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.031, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &484724379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,8 +1303,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &484724383
@@ -1576,8 +1688,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &873242306
@@ -1696,8 +1806,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!54 &933748976
@@ -1857,8 +1965,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &993896890
@@ -1986,8 +2092,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &998108181
@@ -2151,8 +2255,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &1111117143
@@ -2310,8 +2412,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &1212406967
@@ -2498,8 +2598,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!1 &1316891695 stripped
@@ -2529,8 +2627,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!54 &1316891701
@@ -2720,8 +2816,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!54 &1658410306
@@ -2926,8 +3020,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 1000
   maxHp: 4
   currentHp: 10
 --- !u!54 &1736412673
@@ -2938,7 +3030,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736412671}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 30
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -3085,8 +3177,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &1747807598
@@ -3184,8 +3274,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &1795599967
@@ -3298,8 +3386,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!54 &1816904617
@@ -3318,6 +3404,75 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &1846126215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 70172647}
+    m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_Name
+      value: GrenadeWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3e7b271c63e7790468f25a53c0a97d94,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e7b271c63e7790468f25a53c0a97d94, type: 3}
 --- !u!1001 &1892285642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3420,8 +3575,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!54 &1976755816
@@ -3567,8 +3720,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!1 &2086121673
@@ -3637,8 +3788,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 10
-  explosionForce: 10000
   maxHp: 25
   currentHp: 10
 --- !u!65 &2086121677
@@ -3810,8 +3959,6 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: c8b4d38f52c87d94bac37675eb1acd9e, type: 3}
   dieSound: {fileID: 8300000, guid: 3be085f5d5c8f1a48aa7552fd98ef813, type: 3}
   dieEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  explosionRange: 1000
-  explosionForce: 100000
   maxHp: 50
   currentHp: 10
 --- !u!54 &2138254656
