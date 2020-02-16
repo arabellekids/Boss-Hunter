@@ -95,8 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hurtEffect: {fileID: 1000010823978654, guid: 3228a22491941734bb83ad691d17fcb9, type: 3}
   lifeTime: 5
-  speed: 1000
-  dmg: 50
+  speed: 8
+  dmg: 2
 --- !u!54 &8915109432335350540
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8915109432335350535}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0

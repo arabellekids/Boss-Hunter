@@ -60,9 +60,6 @@ public class PlayerMover : MonoBehaviour
         controller.Move(transform.up * jumpVelocity * Time.deltaTime);
         jumpVelocity = (Input.GetKey(KeyCode.Space) && controller.isGrounded) ? jumpForce : jumpVelocity - gravityMult;
 
-
-
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Cursor.lockState = CursorLockMode.None;

@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
     {
         timer = lifeTime;
         rb = GetComponent<Rigidbody>();
+        rb.AddRelativeForce(Vector3.forward * speed, ForceMode.Impulse);
     }
 
     private void Update()
@@ -30,11 +31,6 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        rb.AddRelativeForce(Vector3.forward * speed,ForceMode.Acceleration);
-    }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.GetComponent<Health>() != null)
