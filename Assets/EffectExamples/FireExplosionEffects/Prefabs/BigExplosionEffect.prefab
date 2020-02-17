@@ -18849,8 +18849,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1108f6cf310d4bc4794ecbc0c27fe371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg: 20
+  isBomb: 0
   explosionRange: 10
-  explosionForce: 10000
+  explosionForce: 10
 --- !u!1 &1000012348499044
 GameObject:
   m_ObjectHideFlags: 0

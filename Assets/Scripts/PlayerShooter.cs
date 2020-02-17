@@ -13,8 +13,7 @@ public class PlayerShooter : MonoBehaviour
 
     public TextMeshProUGUI laserChargeText;
     public Slider laserChargeSlider;
-
-    public GameObject grenade;
+    public ParticleSystem shootEffect;
 
     public AudioClip fireSound;
 
@@ -59,11 +58,8 @@ public class PlayerShooter : MonoBehaviour
         {
             laserCarge = 0;
         }
+        shootEffect.Play();
         AudioSource.PlayClipAtPoint(fireSound, transform.position, 0.3f);
         Instantiate(bullet, bulletSpwnPos.position, bulletSpwnPos.rotation, null);
-    }
-    public void ThrowGrenade()
-    {
-        Instantiate(grenade, bulletSpwnPos.position, bulletSpwnPos.rotation, null);
     }
 }

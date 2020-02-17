@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public AudioClip dieSound;
     public GameObject dieEffect;
 
+    public bool isObject = false;
     public float maxHp = 10;
     [HideInInspector]
     public float currentHp = 10;
@@ -20,7 +21,13 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
-        if(currentHp - dmg <= 0)
+        if (currentHp <= 0)
+        {
+            // Already dead... just haven't fully died/destroyed yet
+            return;
+        }
+
+        if(currentHp <= dmg)
         {
             Die();
         }

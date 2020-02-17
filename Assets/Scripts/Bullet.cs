@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
 {
     Rigidbody rb;
     public GameObject hurtEffect;
+    public GameObject hitEffect;
 
     public float lifeTime = 2;
     public float speed = 10;
@@ -33,10 +34,11 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.GetComponent<Health>() != null)
+        Instantiate(hitEffect, transform.position, transform.rotation, null);
+        if (collision.gameObject.GetComponent<Health>() != null)
         {
             Health targetHp = collision.gameObject.GetComponent<Health>();
-            if(targetHp.currentHp < targetHp.maxHp / 3)
+            if(targetHp.currentHp < targetHp.maxHp / 3 && targetHp.isObject)
             {
                 Instantiate(hurtEffect, collision.GetContact(0).point, transform.rotation, collision.transform);
             }
