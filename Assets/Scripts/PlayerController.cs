@@ -4,8 +4,11 @@ using UnityEngine;
 using System;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerMover : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    [HideInInspector]
+    public float timer = 0;
+
     public float speed = 10;
     private float currentSpeed = 10;
     public float rotationSpeed = 180;
@@ -26,6 +29,8 @@ public class PlayerMover : MonoBehaviour
 
     private void Update()
     {
+        timer += Time.deltaTime;
+
         //Moves the player based on the input
         var fowardInput = Input.GetAxis("Vertical");
         var strafeInput = Input.GetAxis("Horizontal");

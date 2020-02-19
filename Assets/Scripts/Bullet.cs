@@ -6,7 +6,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     Rigidbody rb;
-    public GameObject hurtEffect;
     public GameObject hitEffect;
 
     public float lifeTime = 2;
@@ -34,14 +33,19 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.gameObject.GetComponent<Health>() == null)
+        {
+            Instantiate(Instantiate(hitEffect, collision.GetContact(0).point, transform.rotation, collision.transform));
+        }
         Instantiate(hitEffect, transform.position, transform.rotation, null);
         if (collision.gameObject.GetComponent<Health>() != null)
         {
             Health targetHp = collision.gameObject.GetComponent<Health>();
             if(targetHp.currentHp < targetHp.maxHp / 3 && targetHp.isObject)
             {
-                Instantiate(hurtEffect, collision.GetContact(0).point, transform.rotation, collision.transform);
+                Instantiate(targetHp.hurtEffect, collision.GetContact(0).point, transform.rotation, collision.transform);
             }
+            Instantiate(targetHp.hitEffect, collision.GetContact(0).point, transform.rotation, collision.transform);
             targetHp.TakeDamage(dmg);
         }
         Destroy(gameObject);

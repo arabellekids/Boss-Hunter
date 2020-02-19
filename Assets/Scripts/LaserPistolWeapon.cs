@@ -5,8 +5,12 @@ using TMPro;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
-public class PlayerShooter : MonoBehaviour
+public class LaserPistolWeapon : MonoBehaviour
 {
+    public float fireRate = 1;
+
+    public PlayerController player;
+
     public float maxLaserCharge = 1;
     public float rechargeTime = 20;
     public float laserCost = 1;
@@ -27,6 +31,7 @@ public class PlayerShooter : MonoBehaviour
     {
         laserCarge = maxLaserCharge;
         anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
     private void Update()
     {
@@ -46,9 +51,10 @@ public class PlayerShooter : MonoBehaviour
             }
         }
 
-        if(laserCarge >= laserCost)
+        if(laserCarge >= laserCost && Input.GetButtonDown("Fire1") && player.timer >= fireRate)
         {
-            anim.SetBool("Firing", Input.GetButtonDown("Fire1"));
+            Fire();
+            player.timer = 0;
         }
     }
     public void Fire()
@@ -58,6 +64,8 @@ public class PlayerShooter : MonoBehaviour
         {
             laserCarge = 0;
         }
+
+        anim.SetTrigger("Firing");
         shootEffect.Play();
         AudioSource.PlayClipAtPoint(fireSound, transform.position, 0.3f);
         Instantiate(bullet, bulletSpwnPos.position, bulletSpwnPos.rotation, null);

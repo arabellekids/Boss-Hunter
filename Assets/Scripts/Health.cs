@@ -8,6 +8,8 @@ public class Health : MonoBehaviour
     public AudioClip hitSound;
     public AudioClip dieSound;
     public GameObject dieEffect;
+    public GameObject hurtEffect;
+    public GameObject hitEffect;
 
     public bool isObject = false;
     public float maxHp = 10;

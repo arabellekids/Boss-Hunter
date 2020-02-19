@@ -94,9 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 596bcbf76d865214a81899ee90b09062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hurtEffect: {fileID: 1000010823978654, guid: 3228a22491941734bb83ad691d17fcb9, type: 3}
-  hitEffect: {fileID: 1084826221229040078, guid: 58dc2046c76a2f04b9e7e7ac32e8be5d,
-    type: 3}
+  hitEffect: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
   lifeTime: 5
   speed: 8
   dmg: 2
