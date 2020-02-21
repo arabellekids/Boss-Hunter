@@ -10,10 +10,7 @@ public class ShotGunWeapon : MonoBehaviour
     public Transform reloadPos;
 
     private bool reloading = false;
-    public float fireRate = 1;
     public float reloadTime = 2;
-
-    public PlayerController player;
 
     public float maxAmmo = 1;
     public float rechargeTime = 20;
@@ -34,17 +31,15 @@ public class ShotGunWeapon : MonoBehaviour
     {
         ammo = maxAmmo;
         anim = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
     private void Update()
     {
         ammoText.text = ammo.ToString() + "/" + maxAmmo.ToString();
         ammoSlider.value = ammo / maxAmmo;
 
-        if (ammo >= 1 && Input.GetButtonDown("Fire1") && player.timer >= fireRate)
+        if (ammo >= 1)
         {
-            Fire();
-            player.timer = 0;
+            anim.SetBool("Firing", Input.GetAxis("Fire1") != 0);
         }
         if(ammo <= 0)
         {
@@ -63,8 +58,11 @@ public class ShotGunWeapon : MonoBehaviour
     public void Fire()
     {
         ammo -= 1;
+        if(ammo < 0)
+        {
+            ammo = 0;
+        }
 
-        anim.SetTrigger("Firing");
         shootEffect.Play();
         AudioSource.PlayClipAtPoint(fireSound, transform.position, 0.3f);
         Instantiate(bullet, bulletSpwnPos.position, bulletSpwnPos.rotation, null);
