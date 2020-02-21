@@ -33,22 +33,22 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.GetComponent<Health>() == null)
-        {
-            Instantiate(Instantiate(hitEffect, collision.GetContact(0).point, transform.rotation, collision.transform));
-        }
-        Instantiate(hitEffect, transform.position, transform.rotation, null);
         if (collision.gameObject.GetComponent<Health>() != null)
         {
             Health targetHp = collision.gameObject.GetComponent<Health>();
-            if(targetHp.currentHp < targetHp.maxHp / 3 && targetHp.isObject)
+            if(targetHp.currentHp < targetHp.maxHp / 3 && targetHp.isObject && targetHp.hurtEffect != null)
             {
                 Instantiate(targetHp.hurtEffect, collision.GetContact(0).point, transform.rotation, collision.transform);
             }
-            Instantiate(targetHp.hitEffect, collision.GetContact(0).point, transform.rotation, collision.transform);
             targetHp.TakeDamage(dmg);
+            Instantiate(targetHp.hitEffect, transform.position, transform.rotation, null);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else
+        {
+            Instantiate(hitEffect, transform.position, transform.rotation, null);
+            Destroy(gameObject);
+        }
     }
 
 }

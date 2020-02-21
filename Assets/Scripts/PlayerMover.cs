@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerController : MonoBehaviour
+public class PlayerMover : MonoBehaviour
 {
     public float speed = 10;
     private float currentSpeed = 10;

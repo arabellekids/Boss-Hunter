@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
-public class LaserPistolWeapon : MonoBehaviour
+public class PlayerShooter : MonoBehaviour
 {
     public float maxLaserCharge = 1;
     public float rechargeTime = 20;
@@ -48,7 +48,7 @@ public class LaserPistolWeapon : MonoBehaviour
 
         if(laserCarge >= laserCost)
         {
-            anim.SetBool("Firing", Input.GetAxis("Fire1") != 0);
+            anim.SetBool("Firing", Input.GetButtonDown("Fire1"));
         }
     }
     public void Fire()

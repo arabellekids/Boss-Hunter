@@ -39,9 +39,9 @@ public class ShotGunWeapon : MonoBehaviour
 
         if (ammo >= 1)
         {
-            anim.SetBool("Firing", Input.GetAxis("Fire1") != 0);
+            anim.SetBool("Firing", Input.GetButtonDown("Fire1"));
         }
-        if(ammo <= 0)
+        if(reloading)
         {
             timer += Time.deltaTime;
         }
@@ -50,9 +50,11 @@ public class ShotGunWeapon : MonoBehaviour
             reloadEffect.Play();
             reloading = true;
         }
-        if(ammo <= 0 && timer >= reloadTime)
+        if(reloading && timer >= reloadTime)
         {
             ammo = maxAmmo;
+            timer = 0;
+            reloading = false;
         }
     }
     public void Fire()
