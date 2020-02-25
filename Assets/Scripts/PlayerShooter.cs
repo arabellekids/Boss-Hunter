@@ -31,6 +31,7 @@ public class PlayerShooter : MonoBehaviour
     private void Update()
     {
         laserChargeText.text = laserCarge.ToString()+"/"+maxLaserCharge.ToString();
+        laserChargeSlider.gameObject.SetActive(true);
         laserChargeSlider.value = laserCarge / maxLaserCharge;
         if (laserCarge < maxLaserCharge)
         {
@@ -38,7 +39,7 @@ public class PlayerShooter : MonoBehaviour
             if (timer >= rechargeTime)
             {
                 timer = 0;
-                laserCarge += maxLaserCharge / 5;
+                laserCarge = Mathf.Round(laserCarge += maxLaserCharge / 5);
                 if (laserCarge > maxLaserCharge)
                 {
                     laserCarge = maxLaserCharge;

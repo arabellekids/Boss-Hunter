@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.GetComponent<Health>() != null)
         {
             Health targetHp = collision.gameObject.GetComponent<Health>();
-            if(targetHp.currentHp < targetHp.maxHp / 3 && targetHp.isObject && targetHp.hurtEffect != null)
+            if(targetHp.currentHp < targetHp.maxHp / 3 && targetHp.hurtEffect != null)
             {
                 Instantiate(targetHp.hurtEffect, collision.GetContact(0).point, transform.rotation, collision.transform);
             }
@@ -46,8 +46,11 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            Instantiate(hitEffect, transform.position, transform.rotation, null);
-            Destroy(gameObject);
+            if(collision.gameObject.tag != "Player")
+            {
+                Instantiate(hitEffect, transform.position, transform.rotation, null);
+                Destroy(gameObject);
+            }
         }
     }
 

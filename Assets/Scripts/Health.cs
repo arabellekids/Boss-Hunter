@@ -11,7 +11,6 @@ public class Health : MonoBehaviour
     public GameObject hurtEffect;
     public GameObject hitEffect;
 
-    public bool isObject = false;
     public float maxHp = 10;
     [HideInInspector]
     public float currentHp = 10;

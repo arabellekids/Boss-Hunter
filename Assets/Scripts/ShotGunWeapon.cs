@@ -8,6 +8,7 @@ public class ShotGunWeapon : MonoBehaviour
 {
     public ParticleSystem reloadEffect;
     public Transform reloadPos;
+    public Transform ammoCartrige;
 
     private bool reloading = false;
     public float reloadTime = 2;
@@ -36,6 +37,7 @@ public class ShotGunWeapon : MonoBehaviour
     {
         ammoText.text = ammo.ToString() + "/" + maxAmmo.ToString();
         ammoSlider.value = ammo / maxAmmo;
+        ammoSlider.gameObject.SetActive(true);
 
         if (ammo >= 1)
         {
@@ -64,7 +66,7 @@ public class ShotGunWeapon : MonoBehaviour
         {
             ammo = 0;
         }
-
+        ammoCartrige.Rotate(0, 10, 0);
         shootEffect.Play();
         AudioSource.PlayClipAtPoint(fireSound, transform.position, 0.3f);
         Instantiate(bullet, bulletSpwnPos.position, bulletSpwnPos.rotation, null);
