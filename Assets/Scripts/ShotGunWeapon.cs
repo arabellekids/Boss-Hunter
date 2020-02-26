@@ -66,20 +66,14 @@ public class ShotGunWeapon : MonoBehaviour
             }
         }
 
-        if (reloading)
+        if(ammo <= 0)
         {
-            timer += Time.deltaTime;
+            anim.SetBool("reloading", true);
         }
-        if (ammo <= 0 && reloading == false)
+
+        if(ammo > 0)
         {
-            reloadEffect.Play();
-            reloading = true;
-        }
-        if(reloading && timer >= reloadTime)
-        {
-            ammo = maxAmmo;
-            timer = 0;
-            reloading = false;
+            anim.SetBool("reloading", false);
         }
     }
     public void Fire()
@@ -117,5 +111,15 @@ public class ShotGunWeapon : MonoBehaviour
                 accuracyOffset = maxAccuracyOffset;
             }
         }
+    }
+
+    public void beginReloading()
+    {
+        reloadEffect.Play();
+    }
+
+    public void Reload()
+    {
+        ammo = maxAmmo;
     }
 }
