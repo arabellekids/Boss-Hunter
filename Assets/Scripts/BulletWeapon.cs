@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class ShotGunWeapon : MonoBehaviour
+public class BulletWeapon : MonoBehaviour
 {
     public RectTransform aimCircle;
     public ParticleSystem reloadEffect;
@@ -31,7 +31,7 @@ public class ShotGunWeapon : MonoBehaviour
     public GameObject bullet;
     public Transform bulletSpwnPos;
 
-    private int ammo = 1;
+    public int ammo = 1;
     private float timer = 0;
     private float accuracyOffset = 0;
     private float accuracyTimer = 0;
@@ -46,7 +46,7 @@ public class ShotGunWeapon : MonoBehaviour
         ammoSlider.value = ammo / maxAmmo;
         ammoSlider.gameObject.SetActive(true);
 
-        if (ammo >= 1)
+        if (ammo >= 1 && reloading == false)
         {
             anim.SetBool("Firing", Input.GetButton("Fire1"));
         }
@@ -66,16 +66,25 @@ public class ShotGunWeapon : MonoBehaviour
             }
         }
 
-        if(ammo <= 0)
+        if(ammo <= 0 && reloading == false)
         {
-            anim.SetBool("reloading", true);
+            reloading = true;
+            anim.SetTrigger("reload");
         }
 
-        if(ammo > 0)
+    }
+
+
+    private void OnEnable()
+    {
+        if(reloading && ammo == 0)
         {
-            anim.SetBool("reloading", false);
+            ammo = maxAmmo;
+            reloading = false;
+            anim.SetTrigger("reload");
         }
     }
+
     public void Fire()
     {
         ammo -= 1;
@@ -113,7 +122,7 @@ public class ShotGunWeapon : MonoBehaviour
         }
     }
 
-    public void beginReloading()
+    public void BeginReloading()
     {
         reloadEffect.Play();
     }
@@ -121,5 +130,6 @@ public class ShotGunWeapon : MonoBehaviour
     public void Reload()
     {
         ammo = maxAmmo;
+        reloading = false;
     }
 }

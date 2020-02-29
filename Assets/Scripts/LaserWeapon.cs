@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
-public class PlayerShooter : MonoBehaviour
+public class LaserWeapon : MonoBehaviour
 {
     public float maxLaserCharge = 1;
     public float rechargeTime = 20;
@@ -22,7 +22,7 @@ public class PlayerShooter : MonoBehaviour
     public GameObject bullet;
     public Transform bulletSpwnPos;
 
-    private float laserCarge = 1;
+    public float laserCarge = 1;
 
     public float maxAccuracyOffset = 1;
     public float accuracyChange = 0.2f;
