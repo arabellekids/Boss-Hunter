@@ -174,7 +174,7 @@ MonoBehaviour:
     type: 3}
   shootSFX: {fileID: 8300000, guid: be87267ec54c5264daffd2ffeb91d6a7, type: 3}
   changeWeaponSFX: {fileID: 8300000, guid: 7b83d61917ac1224f942a0609b1221f2, type: 3}
-  canRecharge: 1
+  canRecharge: 0
   m_CurrentAmmo: 0
   canShoot: 1
 --- !u!114 &8745372878802205896

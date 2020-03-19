@@ -206,7 +206,7 @@ MonoBehaviour:
     type: 3}
   shootSFX: {fileID: 8300000, guid: 53d2238f4c4b2aa4f8e559c7af9e0126, type: 3}
   changeWeaponSFX: {fileID: 8300000, guid: 7b83d61917ac1224f942a0609b1221f2, type: 3}
-  canRecharge: 1
+  canRecharge: 0
   m_CurrentAmmo: 0
   canShoot: 1
 --- !u!114 &8745372878802205896
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoPacks: 2
-  ammoReloadRate: 1
+  ammoReloadRate: 8
   ammoReloadDelay: 1
   infiniteAmmo: 0
   isReloading: 0

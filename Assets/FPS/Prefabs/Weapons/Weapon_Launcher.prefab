@@ -80,7 +80,7 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 0}
   shootSFX: {fileID: 8300000, guid: 0cacf9e8e361eb24e9101b28422f7c08, type: 3}
   changeWeaponSFX: {fileID: 8300000, guid: 6f3e0904bbbace745bdef08cdbcdfec0, type: 3}
-  canRecharge: 1
+  canRecharge: 0
   m_CurrentAmmo: 0
   canShoot: 1
 --- !u!114 &1284412032582177879
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoPacks: 2
-  ammoReloadRate: 1
+  ammoReloadRate: 2
   ammoReloadDelay: 1
   infiniteAmmo: 0
   isReloading: 0

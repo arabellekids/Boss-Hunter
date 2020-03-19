@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoPacks: 2
-  ammoReloadRate: 10
+  ammoReloadRate: 12.5
   ammoReloadDelay: 1
   infiniteAmmo: 0
   isReloading: 0
