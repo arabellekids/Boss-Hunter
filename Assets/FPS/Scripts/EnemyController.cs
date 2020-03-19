@@ -379,9 +379,12 @@ public class EnemyController : MonoBehaviour
         // spawn a particle system when dying
         var vfx = Instantiate(deathVFX, deathVFXSpawnPoint.position, Quaternion.identity);
         Destroy(vfx, 5f);
-               
+
         // tells the game flow manager to handle the enemy destuction
-        m_EnemyManager.UnregisterEnemy(this);
+        if(m_EnemyManager != null)
+        {
+            m_EnemyManager.UnregisterEnemy(this);
+        }
 
         // loot an object
         if (TryDropItem())
