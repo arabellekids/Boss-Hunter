@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8305873973857371785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: coin_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Coin
+  m_Id: coin
+  m_ReferenceDefinition: {fileID: 0}
+  m_CategoryHashes: 
+  m_CategoryIds: []
+  m_DetailDefinitionValues:
+  - {fileID: -6808534199621563761}
+  - {fileID: -7482984427274784922}
+--- !u!114 &-7482984427274784922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cb36b4e39d04058878d632b15e1f5b, type: 3}
+  m_Name: coin_InventoryItem_Detail_Analytics
+  m_EditorClassIdentifier: 
+--- !u!114 &-7036587027843187151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7bd278f724ab94d891fb484af87b44, type: 3}
+  m_Name: _Catalog_GameItems
+  m_EditorClassIdentifier: 
+  m_Categories: []
+  m_Definitions:
+  - {fileID: 5063132728211109084}
+  - {fileID: -5871163908108530594}
+--- !u!114 &-6808534199621563761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad1838c60d074d51ad3002c9f025f98, type: 3}
+  m_Name: coin_InventoryItem_Detail_Currency
+  m_EditorClassIdentifier: 
+  m_CurrencyType: 0
+  m_CurrencySubType: 0
+--- !u!114 &-5871163908108530594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbf3f8defcf78f428d1448085483eff, type: 3}
+  m_Name: weapon_GameItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Weapon
+  m_Id: weapon
+  m_ReferenceDefinition: {fileID: 0}
+  m_CategoryHashes: 
+  m_CategoryIds: []
+  m_DetailDefinitionValues:
+  - {fileID: 1520977763519543921}
+  - {fileID: -1091582064829154058}
+--- !u!114 &-5829455724758449127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a121bc2d8644fcb8f5f5ed98363908, type: 3}
+  m_Name: wallet_Inventory
+  m_EditorClassIdentifier: 
+  m_DisplayName: Wallet
+  m_Id: wallet
+  m_ReferenceDefinition: {fileID: 0}
+  m_CategoryHashes: 
+  m_CategoryIds: []
+  m_DetailDefinitionValues: []
+  m_DefaultItems:
+  - m_DefinitionHash: 1432983389
+    m_DefinitionId: coin
+    m_Quantity: 50
+--- !u!114 &-4131640957586880696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cb36b4e39d04058878d632b15e1f5b, type: 3}
+  m_Name: coin_GameItem_Detail_Analytics
+  m_EditorClassIdentifier: 
+--- !u!114 &-1091582064829154058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42737dc928f7f4b5eb753f03c1012a5e, type: 3}
+  m_Name: weapon_GameItem_Detail_AudioClipAssets
+  m_EditorClassIdentifier: 
+  m_Names:
+  - ShootSound
+  m_Values:
+  - {fileID: 8300000, guid: 53d2238f4c4b2aa4f8e559c7af9e0126, type: 3}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d6d794703b5406883240f543e5b084, type: 3}
+  m_Name: GameFoundationDatabase
+  m_EditorClassIdentifier: 
+  m_GameItemCatalog: {fileID: -7036587027843187151}
+  m_InventoryCatalog: {fileID: 8819116274142577056}
+  m_StatCatalog: {fileID: 3695374467738128621}
+--- !u!114 &557754137737858748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: gun_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: 76Gun
+  m_Id: gun
+  m_ReferenceDefinition: {fileID: 0}
+  m_CategoryHashes: 
+  m_CategoryIds: []
+  m_DetailDefinitionValues: []
+--- !u!114 &1520977763519543921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2f0defaa6a04ebf8ab6928cabe7095, type: 3}
+  m_Name: weapon_GameItem_Detail_PrefabAssets
+  m_EditorClassIdentifier: 
+  m_Names:
+  - 76Gun
+  m_Values:
+  - {fileID: 2800851298597434340, guid: 1906433a66659124db301451917d9e9f, type: 3}
+--- !u!114 &1946182530030954793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a121bc2d8644fcb8f5f5ed98363908, type: 3}
+  m_Name: main_Inventory
+  m_EditorClassIdentifier: 
+  m_DisplayName: Bags
+  m_Id: main
+  m_ReferenceDefinition: {fileID: 0}
+  m_CategoryHashes: 
+  m_CategoryIds: []
+  m_DetailDefinitionValues: []
+  m_DefaultItems:
+  - m_DefinitionHash: 1251722587
+    m_DefinitionId: gun
+    m_Quantity: 0
+--- !u!114 &2394926992607084817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad1838c60d074d51ad3002c9f025f98, type: 3}
+  m_Name: coin_GameItem_Detail_Currency
+  m_EditorClassIdentifier: 
+  m_CurrencyType: 0
+  m_CurrencySubType: 0
+--- !u!114 &3695374467738128621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88f5bccd054f984d9be6ad05294da40, type: 3}
+  m_Name: _Catalog_Stats
+  m_EditorClassIdentifier: 
+  m_StatDefinitions: []
+--- !u!114 &5063132728211109084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbf3f8defcf78f428d1448085483eff, type: 3}
+  m_Name: coin_GameItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: coin
+  m_Id: coin
+  m_ReferenceDefinition: {fileID: 0}
+  m_CategoryHashes: 
+  m_CategoryIds: []
+  m_DetailDefinitionValues:
+  - {fileID: 2394926992607084817}
+  - {fileID: -4131640957586880696}
+--- !u!114 &8819116274142577056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b084f2c338a4185ab8badeed2a3947, type: 3}
+  m_Name: _Catalog_Inventories
+  m_EditorClassIdentifier: 
+  m_Categories:
+  - m_Id: weapon
+    m_Hash: 1764992998
+    m_DisplayName: Weapon
+  - m_Id: ammo
+    m_Hash: -275808726
+    m_DisplayName: Ammo
+  - m_Id: potion
+    m_Hash: 1253486765
+    m_DisplayName: Potion
+  m_CollectionDefinitions:
+  - {fileID: 1946182530030954793}
+  - {fileID: -5829455724758449127}
+  m_ItemDefinitions:
+  - {fileID: -8305873973857371785}
+  - {fileID: 557754137737858748}
+  m_DefaultCollectionDefinitions: []

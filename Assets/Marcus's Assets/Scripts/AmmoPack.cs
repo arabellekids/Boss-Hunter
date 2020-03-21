@@ -42,7 +42,7 @@ public class AmmoPack : MonoBehaviour
             }
             else if (GameObject.Find(weaponAmmoName + "(Clone)") == null)
             {
-                if (GameObject.FindGameObjectsWithTag("ErrorMessage").Length == 0 && error == false)
+                if (GameObject.FindGameObjectsWithTag("Message").Length == 0 && error == false)
                 {
                     Vector3 messageOffset = new Vector3(messageSpot.position.x, messageSpot.position.y + 68.6f, messageSpot.position.z);
                     var message = Instantiate(errorMessage, messageOffset, Quaternion.identity, messageSpot);

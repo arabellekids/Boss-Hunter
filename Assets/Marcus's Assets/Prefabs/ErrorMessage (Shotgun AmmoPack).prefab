@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9094110279749877814}
   m_Layer: 0
   m_Name: ErrorMessage (Shotgun AmmoPack)
-  m_TagString: ErrorMessage
+  m_TagString: Message
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

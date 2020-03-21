@@ -7,13 +7,13 @@ public class ObjectiveKillEnemy : MonoBehaviour
 {
     Health health;
     Objective m_Objective;
-    public bool rewardAvaliable = true;
 
-    public string bossName;
     public Transform rewardPos;
     public GameObject reward;
 
-    private GameObject objectiveEnemy;
+    public AudioClip completeSound;
+
+    public GameObject objectiveEnemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +21,7 @@ public class ObjectiveKillEnemy : MonoBehaviour
         DebugUtility.HandleErrorIfNullGetComponent<Objective, ObjectiveKillEnemies>(m_Objective, this, gameObject);
 
         health = objectiveEnemy.GetComponent<Health>();
-        health.onDie += OnDie;
-
-        objectiveEnemy = GameObject.Find(bossName);
-        rewardPos = GameObject.Find("rewardPos").transform;
+        health.onDie += CompleteObjective;
     }
 
     // Update is called once per frame
@@ -32,11 +29,15 @@ public class ObjectiveKillEnemy : MonoBehaviour
     {
         
     }
-    void OnDie()
+    void CompleteObjective()
     {
-        if (rewardAvaliable)
+        if (reward != null)
         {
             Instantiate(reward,rewardPos.position, rewardPos.rotation, null);
+        }
+        if(completeSound != null)
+        {
+            AudioSource.PlayClipAtPoint(completeSound, GameObject.FindGameObjectWithTag("Player").transform.position, 1);
         }
         m_Objective.CompleteObjective(string.Empty, "1", "Objective complete : " + m_Objective.title);
     }
