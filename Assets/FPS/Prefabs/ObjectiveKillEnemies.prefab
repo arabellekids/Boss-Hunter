@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: 
   description: Defeat all the enemies in the map
-  isOptionnal: 0
+  isOptional: 0
   delayVisible: 4
 --- !u!114 &598277302063295019
 MonoBehaviour:
@@ -79,4 +79,4 @@ MonoBehaviour:
   message: Eliminate all the enemies
   messagePrefab: {fileID: 3003312392959327722, guid: dbfc7742a2f49bf42a9a012e4ec4b773,
     type: 3}
-  displayBeforeShowing: 0
+  delayBeforeShowing: 0

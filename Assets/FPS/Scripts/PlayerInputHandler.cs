@@ -220,7 +220,7 @@ public class PlayerInputHandler : MonoBehaviour
             else
             {
                 // reduce mouse input amount to be equivalent to stick movement
-                i *= (0.5f * Time.deltaTime);
+                i *= (0.75f * Time.deltaTime);
 #if UNITY_WEBGL
                 // Mouse tends to be even more sensitive in WebGL due to mouse acceleration, so reduce it even more
                 i *= webglLookSensitivityMultiplier;
