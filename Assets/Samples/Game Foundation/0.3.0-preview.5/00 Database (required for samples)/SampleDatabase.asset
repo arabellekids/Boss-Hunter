@@ -1,0 +1,602 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d6d794703b5406883240f543e5b084, type: 3}
+  m_Name: SampleDatabase
+  m_EditorClassIdentifier: 
+  m_GameItemCatalog: {fileID: 114325963339901028}
+  m_InventoryCatalog: {fileID: 114616333557743888}
+  m_StatCatalog: {fileID: 114331437924479624}
+--- !u!114 &114008296836961590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0045a420c8b2b474eb4c14cf512c1cb5, type: 3}
+  m_Name: player_GameItem_Detail_Stat
+  m_EditorClassIdentifier: 
+  m_DefaultKeyList: 1323dace
+  m_DefaultValueList:
+  - type: 1
+    intValue: 1120403456
+--- !u!114 &114075988919942190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0045a420c8b2b474eb4c14cf512c1cb5, type: 3}
+  m_Name: healthPotion_InventoryItem_Detail_Stat
+  m_EditorClassIdentifier: 
+  m_DefaultKeyList: 6519b3ca
+  m_DefaultValueList:
+  - type: 0
+    intValue: 10
+--- !u!114 &114077590227894408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0045a420c8b2b474eb4c14cf512c1cb5, type: 3}
+  m_Name: sword_InventoryItem_Detail_Stat
+  m_EditorClassIdentifier: 
+  m_DefaultKeyList: 6c54c81149ed64c7
+  m_DefaultValueList:
+  - type: 1
+    intValue: 1075838976
+  - type: 0
+    intValue: 4
+--- !u!114 &114078192604420726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a121bc2d8644fcb8f5f5ed98363908, type: 3}
+  m_Name: blank_Inventory
+  m_EditorClassIdentifier: 
+  m_DisplayName: Blank
+  m_Id: blank
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories: []
+  m_DetailDefinitionValues: []
+  m_DefaultItems: []
+--- !u!114 &114116162581019304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a121bc2d8644fcb8f5f5ed98363908, type: 3}
+  m_Name: backpack_Inventory
+  m_EditorClassIdentifier: 
+  m_DisplayName: Backpack
+  m_Id: backpack
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories: []
+  m_DetailDefinitionValues: []
+  m_DefaultItems:
+  - m_DefinitionId: sword
+    m_Quantity: 5
+  - m_DefinitionId: healthPotion
+    m_Quantity: 10
+--- !u!114 &114277752204044340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a121bc2d8644fcb8f5f5ed98363908, type: 3}
+  m_Name: store_Inventory
+  m_EditorClassIdentifier: 
+  m_DisplayName: Store
+  m_Id: store
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories: []
+  m_DetailDefinitionValues: []
+  m_DefaultItems:
+  - m_DefinitionId: apple
+    m_Quantity: 20
+--- !u!114 &114304098285233780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: orange_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Orange
+  m_Id: orange
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories:
+  - food
+  - fruit
+  m_DetailDefinitionValues: []
+--- !u!114 &114310450956467628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a34515863245aa809c1d99edb8f887, type: 3}
+  m_Name: smoothie_InventoryItem_Detail_Purchasable
+  m_EditorClassIdentifier: 
+  m_Owner: {fileID: 114370626563284388}
+  m_DefaultSourceInventoryId: shoppingCart
+  m_DefaultDestinationInventoryId: shoppingCart
+  m_Payout:
+    m_OutputItems:
+    - m_DefinitionId: smoothie
+      m_Quantity: 1
+      m_DestinationInventoryId: 
+  m_Prices:
+  - m_Name: default
+    m_InputItems:
+    - m_TransactionType: 0
+      m_DefinitionId: apple
+      m_Price: 1
+      m_SourceInventoryId: 
+    - m_TransactionType: 0
+      m_DefinitionId: orange
+      m_Price: 1
+      m_SourceInventoryId: 
+    - m_TransactionType: 0
+      m_DefinitionId: banana
+      m_Price: 1
+      m_SourceInventoryId: 
+  - m_Name: Veggie
+    m_InputItems:
+    - m_TransactionType: 0
+      m_DefinitionId: broccoli
+      m_Price: 1
+      m_SourceInventoryId: 
+    - m_TransactionType: 0
+      m_DefinitionId: carrot
+      m_Price: 1
+      m_SourceInventoryId: 
+--- !u!114 &114325963339901028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7bd278f724ab94d891fb484af87b44, type: 3}
+  m_Name: _Catalog_GameItems
+  m_EditorClassIdentifier: 
+  m_Categories: []
+  m_Definitions:
+  - {fileID: 114889484598111318}
+--- !u!114 &114331437924479624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88f5bccd054f984d9be6ad05294da40, type: 3}
+  m_Name: _Catalog_Stats
+  m_EditorClassIdentifier: 
+  m_StatDefinitions:
+  - m_Id: health
+    m_DisplayName: Health
+    m_StatValueType: 1
+  - m_Id: damage
+    m_DisplayName: Damage
+    m_StatValueType: 1
+  - m_Id: durability
+    m_DisplayName: Durability
+    m_StatValueType: 0
+  - m_Id: healthRestore
+    m_DisplayName: HealthRestore
+    m_StatValueType: 0
+--- !u!114 &114370626563284388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: smoothie_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Smoothie
+  m_Id: smoothie
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories:
+  - food
+  - potion
+  m_DetailDefinitionValues:
+  - {fileID: 114426796656270350}
+--- !u!114 &114413901006786442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: carrot_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Carrot
+  m_Id: carrot
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories:
+  - food
+  - vegetable
+  m_DetailDefinitionValues: []
+--- !u!114 &114426796656270350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e550a9312aa14d988e8fc7fce0e4ec88, type: 3}
+  m_Name: smoothie_InventoryItem_Detail_EditorPurchasable
+  m_EditorClassIdentifier: 
+  m_DefaultSourceInventoryId: shoppingCart
+  m_DefaultDestinationInventoryId: shoppingCart
+  m_Payout:
+    m_OutputItems:
+    - m_DefinitionId: smoothie
+      m_Quantity: 1
+      m_DestinationInventoryId: shoppingCart
+  m_Prices:
+  - m_Name: default
+    m_InputItems:
+    - m_TransactionType: 0
+      m_DefinitionId: apple
+      m_Price: 1
+      m_SourceInventoryId: 
+    - m_TransactionType: 0
+      m_DefinitionId: orange
+      m_Price: 1
+      m_SourceInventoryId: 
+    - m_TransactionType: 0
+      m_DefinitionId: banana
+      m_Price: 1
+      m_SourceInventoryId: 
+  - m_Name: Veggie
+    m_InputItems:
+    - m_TransactionType: 0
+      m_DefinitionId: carrot
+      m_Price: 1
+      m_SourceInventoryId: 
+    - m_TransactionType: 0
+      m_DefinitionId: broccoli
+      m_Price: 1
+      m_SourceInventoryId: 
+--- !u!114 &114468365760323680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a121bc2d8644fcb8f5f5ed98363908, type: 3}
+  m_Name: shoppingCart_Inventory
+  m_EditorClassIdentifier: 
+  m_DisplayName: Shopping Cart
+  m_Id: shoppingCart
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories: []
+  m_DetailDefinitionValues: []
+  m_DefaultItems:
+  - m_DefinitionId: apple
+    m_Quantity: 20
+  - m_DefinitionId: orange
+    m_Quantity: 20
+  - m_DefinitionId: banana
+    m_Quantity: 20
+  - m_DefinitionId: carrot
+    m_Quantity: 20
+  - m_DefinitionId: broccoli
+    m_Quantity: 20
+--- !u!114 &114555485567119488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: banana_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Banana
+  m_Id: banana
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories:
+  - food
+  - fruit
+  m_DetailDefinitionValues: []
+--- !u!114 &114582791956722390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: apple_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Apple
+  m_Id: apple
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories:
+  - food
+  - fruit
+  m_DetailDefinitionValues: []
+--- !u!114 &114616333557743888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b084f2c338a4185ab8badeed2a3947, type: 3}
+  m_Name: _Catalog_Inventories
+  m_EditorClassIdentifier: 
+  m_Categories:
+  - m_Id: weapon
+    m_DisplayName: Weapon
+  - m_Id: food
+    m_DisplayName: Food
+  - m_Id: potion
+    m_DisplayName: Potion
+  - m_Id: fruit
+    m_DisplayName: Fruit
+  - m_Id: vegetable
+    m_DisplayName: Vegetable
+  m_CollectionDefinitions:
+  - {fileID: 114868647683865680}
+  - {fileID: 114943216749024572}
+  - {fileID: 114078192604420726}
+  - {fileID: 114902200142260966}
+  - {fileID: 114277752204044340}
+  - {fileID: 114116162581019304}
+  - {fileID: 114468365760323680}
+  m_ItemDefinitions:
+  - {fileID: 114582791956722390}
+  - {fileID: 114304098285233780}
+  - {fileID: 114555485567119488}
+  - {fileID: 114626138473699418}
+  - {fileID: 114678118735565998}
+  - {fileID: 114993039564817874}
+  - {fileID: 114413901006786442}
+  - {fileID: 114680005413831068}
+  - {fileID: 114370626563284388}
+  m_DefaultCollectionDefinitions:
+  - m_Id: shoppingCart
+    m_DisplayName: Shopping Cart
+    m_CollectionDefinitionHash: 857660282
+  - m_Id: store
+    m_DisplayName: Store
+    m_CollectionDefinitionHash: -11052937
+  - m_Id: backpack
+    m_DisplayName: Backpack
+    m_CollectionDefinitionHash: 204834153
+--- !u!114 &114626138473699418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: coin_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Coin
+  m_Id: coin
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories: []
+  m_DetailDefinitionValues:
+  - {fileID: 114820705848155728}
+--- !u!114 &114678118735565998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: sword_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Sword
+  m_Id: sword
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories:
+  - weapon
+  m_DetailDefinitionValues:
+  - {fileID: 114077590227894408}
+--- !u!114 &114680005413831068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: broccoli_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Broccoli
+  m_Id: broccoli
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories:
+  - food
+  - vegetable
+  m_DetailDefinitionValues: []
+--- !u!114 &114820705848155728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad1838c60d074d51ad3002c9f025f98, type: 3}
+  m_Name: coin_InventoryItem_Detail_Currency
+  m_EditorClassIdentifier: 
+  m_CurrencyType: 0
+  m_CurrencySubType: 0
+--- !u!114 &114868647683865680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a121bc2d8644fcb8f5f5ed98363908, type: 3}
+  m_Name: main_Inventory
+  m_EditorClassIdentifier: 
+  m_DisplayName: Main
+  m_Id: main
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories: []
+  m_DetailDefinitionValues: []
+  m_DefaultItems:
+  - m_DefinitionId: apple
+    m_Quantity: 20
+--- !u!114 &114889484598111318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbf3f8defcf78f428d1448085483eff, type: 3}
+  m_Name: player_GameItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Player
+  m_Id: player
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories: []
+  m_DetailDefinitionValues:
+  - {fileID: 114008296836961590}
+--- !u!114 &114902200142260966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a121bc2d8644fcb8f5f5ed98363908, type: 3}
+  m_Name: fruitSalad_Inventory
+  m_EditorClassIdentifier: 
+  m_DisplayName: Fruit Salad
+  m_Id: fruitSalad
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories: []
+  m_DetailDefinitionValues: []
+  m_DefaultItems:
+  - m_DefinitionId: apple
+    m_Quantity: 3
+  - m_DefinitionId: orange
+    m_Quantity: 2
+  - m_DefinitionId: banana
+    m_Quantity: 1
+--- !u!114 &114943216749024572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a121bc2d8644fcb8f5f5ed98363908, type: 3}
+  m_Name: wallet_Inventory
+  m_EditorClassIdentifier: 
+  m_DisplayName: Wallet
+  m_Id: wallet
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories: []
+  m_DetailDefinitionValues: []
+  m_DefaultItems:
+  - m_DefinitionId: coin
+    m_Quantity: 100
+--- !u!114 &114993039564817874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbd052539327467295d2009d33aa660, type: 3}
+  m_Name: healthPotion_InventoryItem
+  m_EditorClassIdentifier: 
+  m_DisplayName: Health Potion
+  m_Id: healthPotion
+  m_ReferenceDefinition: {fileID: 0}
+  m_Categories:
+  - potion
+  m_DetailDefinitionValues:
+  - {fileID: 114075988919942190}
