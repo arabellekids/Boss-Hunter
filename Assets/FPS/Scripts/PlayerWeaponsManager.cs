@@ -79,6 +79,8 @@ public class PlayerWeaponsManager : MonoBehaviour
     WeaponSwitchState m_WeaponSwitchState;
     int m_WeaponSwitchNewWeaponIndex;
 
+    public Camera playerCamera;
+
     private void Start()
     {
         activeWeaponIndex = -1;
@@ -87,8 +89,8 @@ public class PlayerWeaponsManager : MonoBehaviour
         m_InputHandler = GetComponent<PlayerInputHandler>();
         DebugUtility.HandleErrorIfNullGetComponent<PlayerInputHandler, PlayerWeaponsManager>(m_InputHandler, this, gameObject);
 
-        m_PlayerCharacterController = GetComponent<PlayerCharacterController>();
-        DebugUtility.HandleErrorIfNullGetComponent<PlayerCharacterController, PlayerWeaponsManager>(m_PlayerCharacterController, this, gameObject);
+        //m_PlayerCharacterController = GetComponent<PlayerCharacterController>();
+        //DebugUtility.HandleErrorIfNullGetComponent<PlayerCharacterController, PlayerWeaponsManager>(m_PlayerCharacterController, this, gameObject);
 
         SetFOV(defaultFOV);
 
@@ -178,7 +180,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     // Sets the FOV of the main camera and the weapon camera simultaneously
     public void SetFOV(float fov)
     {
-        m_PlayerCharacterController.playerCamera.fieldOfView = fov;
+        playerCamera.fieldOfView = fov;
         weaponCamera.fieldOfView = fov * weaponFOVMultiplier;
     }
 
@@ -260,12 +262,12 @@ public class PlayerWeaponsManager : MonoBehaviour
             if (isAiming && activeWeapon)
             {
                 m_WeaponMainLocalPosition = Vector3.Lerp(m_WeaponMainLocalPosition, aimingWeaponPosition.localPosition + activeWeapon.aimOffset, aimingAnimationSpeed * Time.deltaTime);
-                SetFOV(Mathf.Lerp(m_PlayerCharacterController.playerCamera.fieldOfView, activeWeapon.aimZoomRatio * defaultFOV, aimingAnimationSpeed * Time.deltaTime));
+                SetFOV(Mathf.Lerp(playerCamera.fieldOfView, activeWeapon.aimZoomRatio * defaultFOV, aimingAnimationSpeed * Time.deltaTime));
             }
             else
             {
                 m_WeaponMainLocalPosition = Vector3.Lerp(m_WeaponMainLocalPosition, defaultWeaponPosition.localPosition, aimingAnimationSpeed * Time.deltaTime);
-                SetFOV(Mathf.Lerp(m_PlayerCharacterController.playerCamera.fieldOfView, defaultFOV, aimingAnimationSpeed * Time.deltaTime));
+                SetFOV(Mathf.Lerp(playerCamera.fieldOfView, defaultFOV, aimingAnimationSpeed * Time.deltaTime));
             }
         }
     }
@@ -273,7 +275,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     // Updates the weapon bob animation based on character speed
     void UpdateWeaponBob()
     {
-        if (Time.deltaTime > 0f)
+        /*if (Time.deltaTime > 0f)
         {
             Vector3 playerCharacterVelocity = (m_PlayerCharacterController.transform.position - m_LastCharacterPosition) / Time.deltaTime;
 
@@ -296,7 +298,7 @@ public class PlayerWeaponsManager : MonoBehaviour
             m_WeaponBobLocalPosition.y = Mathf.Abs(vBobValue);
 
             m_LastCharacterPosition = m_PlayerCharacterController.transform.position;
-        }
+        }*/
     }
 
     // Updates the weapon recoil animation

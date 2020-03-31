@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
-    private PlayerCharacterController player;
+    private Transform player;
     public Transform teleportPoint;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacterController>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
-            player.transform.position = teleportPoint.position;
-            player.transform.rotation = transform.rotation;
+            var teleportVector = new Vector3(teleportPoint.position.x - other.transform.position.x, teleportPoint.position.y - other.transform.position.y, teleportPoint.position.z - other.transform.position.z);
+            other.GetComponent<CharacterController>().Move(teleportVector);
         }
     }
-
 }
