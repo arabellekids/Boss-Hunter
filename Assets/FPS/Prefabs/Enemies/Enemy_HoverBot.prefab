@@ -1124,6 +1124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_HitSparks (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8492437560918690266, guid: 7593818fba43c7f4c8372299ce5e893f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1179,11 +1184,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -63.852
       objectReference: {fileID: 0}
-    - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7593818fba43c7f4c8372299ce5e893f, type: 3}
 --- !u!198 &9125706537325074547 stripped
@@ -1203,6 +1203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VFX_HitSparks (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
+        type: 3}
+      propertyPath: looping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8492437560918690266, guid: 7593818fba43c7f4c8372299ce5e893f,
         type: 3}
@@ -1258,11 +1263,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -257.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
-        type: 3}
-      propertyPath: looping
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7593818fba43c7f4c8372299ce5e893f, type: 3}
@@ -1359,6 +1359,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_HitSparks (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8492437560918690266, guid: 7593818fba43c7f4c8372299ce5e893f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1413,11 +1418,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -186.232
-      objectReference: {fileID: 0}
-    - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
-        type: 3}
-      propertyPath: looping
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7593818fba43c7f4c8372299ce5e893f, type: 3}
@@ -1684,6 +1684,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_HitSparks
       objectReference: {fileID: 0}
+    - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8492437560918690266, guid: 7593818fba43c7f4c8372299ce5e893f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1738,11 +1743,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -61.186005
-      objectReference: {fileID: 0}
-    - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
-        type: 3}
-      propertyPath: looping
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7593818fba43c7f4c8372299ce5e893f, type: 3}

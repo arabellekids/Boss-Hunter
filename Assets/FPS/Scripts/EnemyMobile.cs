@@ -9,12 +9,16 @@ public class EnemyMobile : MonoBehaviour
         Patrol,
         Follow,
         Attack,
+        GoToWall,
         AttackWall,
+        GoToCore,
+        AttackCore,
     }
     public float stoppingDistFromWall = 5;
     private float defaultStoppingDist;
     public float attackWallRange = 6;
 
+    Transform corePos;
     public Transform wallPos;
     public Animator animator;
     [Tooltip("Fraction of the enemy's attack range at which it will stop moving towards target while attacking")]
@@ -58,7 +62,8 @@ public class EnemyMobile : MonoBehaviour
         m_AudioSource.clip = MovementSound;
         m_AudioSource.Play();
         defaultStoppingDist = m_EnemyController.m_NavMeshAgent.stoppingDistance;
-        aiState = AIState.AttackWall;
+        corePos = GameObject.Find("Core").transform;
+        aiState = AIState.GoToWall;
     }
 
     void Update()
@@ -87,10 +92,9 @@ public class EnemyMobile : MonoBehaviour
                     aiState = AIState.Attack;
                     m_EnemyController.SetNavDestination(transform.position);
                 }
-                if(m_EnemyController.isSeeingTarget == false)
+                if(m_EnemyController.isTargetInAttackRange == false)
                 {
-                    aiState = AIState.AttackWall;
-                    m_EnemyController.SetNavDestination(wallPos.position);
+                    aiState = AIState.GoToWall;
                 }
                 break;
             case AIState.Attack:
@@ -101,9 +105,33 @@ public class EnemyMobile : MonoBehaviour
                 }
                 break;
             case AIState.AttackWall:
-                if(m_EnemyController.isSeeingTarget)
+                if(m_EnemyController.knownDetectedTarget != wallPos.gameObject)
                 {
                     aiState = AIState.Follow;
+                }
+                if(wallPos.GetComponent<Health>().currentHealth <= 0)
+                {
+                    aiState = AIState.GoToCore;
+                }
+                break;
+            case AIState.GoToWall:
+                if(m_EnemyController.knownDetectedTarget == GameObject.FindGameObjectWithTag("Player"))
+                {
+                    aiState = AIState.Follow;
+                }
+                else if (Vector3.Distance(transform.position, wallPos.position) <= m_EnemyController.attackRange)
+                {
+                    aiState = AIState.AttackWall;
+                }
+                if (wallPos.GetComponent<Health>().currentHealth <= 0)
+                {
+                    aiState = AIState.GoToCore;
+                }
+                break;
+            case AIState.GoToCore:
+                if (Vector3.Distance(transform.position, corePos.position) <= m_EnemyController.attackRange)
+                {
+                    aiState = AIState.AttackCore;
                 }
                 break;
         }
@@ -132,19 +160,23 @@ public class EnemyMobile : MonoBehaviour
                     m_EnemyController.SetNavDestination(transform.position);
                 }
                 m_EnemyController.OrientTowards(m_EnemyController.knownDetectedTarget.transform.position);
-                m_EnemyController.TryAtack((m_EnemyController.knownDetectedTarget.transform.position - m_EnemyController.weapon.transform.position).normalized);
+                m_EnemyController.TryAtack((wallPos.position - m_EnemyController.weapon.transform.position).normalized);
                 break;
             case AIState.AttackWall:
-                if(Vector3.Distance(transform.position,wallPos.position) > m_EnemyController.m_NavMeshAgent.stoppingDistance)
-                {
-                    m_EnemyController.SetNavDestination(wallPos.position);
-                }
-                
                 m_EnemyController.OrientTowards(wallPos.position);
-                if(Vector3.Distance(transform.position,wallPos.position) <= attackWallRange)
-                {
-                    m_EnemyController.TryAtack((wallPos.position - m_EnemyController.weapon.transform.position).normalized);
-                }
+                m_EnemyController.TryAtack((wallPos.position - m_EnemyController.weapon.transform.position).normalized);
+                break;
+            case AIState.GoToWall:
+                m_EnemyController.SetNavDestination(wallPos.GetComponent<Actor>().aimPoint.position);
+                m_EnemyController.OrientTowards(wallPos.GetComponent<Actor>().aimPoint.position);
+                break;
+            case AIState.GoToCore:
+                m_EnemyController.SetNavDestination(corePos.GetComponent<Actor>().aimPoint.position);
+                m_EnemyController.OrientTowards(corePos.GetComponent<Actor>().aimPoint.position);
+                break;
+            case AIState.AttackCore:
+                m_EnemyController.OrientTowards(corePos.position);
+                m_EnemyController.TryAtack((corePos.position - m_EnemyController.weapon.transform.position).normalized);
                 break;
         }
     }
