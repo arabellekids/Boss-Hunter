@@ -113,7 +113,7 @@ public class EnemyController : MonoBehaviour
     GameFlowManager m_GameFlowManager;
     bool m_WasDamagedThisFrame;
 
-    void Start()
+    void Awake()
     {
         m_ActorsManager = FindObjectOfType<ActorsManager>();
         DebugUtility.HandleErrorIfNullFindObject<ActorsManager, EnemyController>(m_ActorsManager, this);

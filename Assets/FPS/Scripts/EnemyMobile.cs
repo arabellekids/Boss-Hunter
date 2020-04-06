@@ -9,8 +9,13 @@ public class EnemyMobile : MonoBehaviour
         Patrol,
         Follow,
         Attack,
+        AttackWall,
     }
+    public float stoppingDistFromWall = 5;
+    private float defaultStoppingDist;
+    public float attackWallRange = 6;
 
+    public Transform wallPos;
     public Animator animator;
     [Tooltip("Fraction of the enemy's attack range at which it will stop moving towards target while attacking")]
     [Range(0f, 1f)]
@@ -52,6 +57,8 @@ public class EnemyMobile : MonoBehaviour
         DebugUtility.HandleErrorIfNullGetComponent<AudioSource, EnemyMobile>(m_AudioSource, this, gameObject);
         m_AudioSource.clip = MovementSound;
         m_AudioSource.Play();
+        defaultStoppingDist = m_EnemyController.m_NavMeshAgent.stoppingDistance;
+        aiState = AIState.AttackWall;
     }
 
     void Update()
@@ -80,10 +87,21 @@ public class EnemyMobile : MonoBehaviour
                     aiState = AIState.Attack;
                     m_EnemyController.SetNavDestination(transform.position);
                 }
+                if(m_EnemyController.isSeeingTarget == false)
+                {
+                    aiState = AIState.AttackWall;
+                    m_EnemyController.SetNavDestination(wallPos.position);
+                }
                 break;
             case AIState.Attack:
                 // Transition to follow when no longer a target in attack range
                 if (!m_EnemyController.isTargetInAttackRange)
+                {
+                    aiState = AIState.Follow;
+                }
+                break;
+            case AIState.AttackWall:
+                if(m_EnemyController.isSeeingTarget)
                 {
                     aiState = AIState.Follow;
                 }
@@ -115,6 +133,18 @@ public class EnemyMobile : MonoBehaviour
                 }
                 m_EnemyController.OrientTowards(m_EnemyController.knownDetectedTarget.transform.position);
                 m_EnemyController.TryAtack((m_EnemyController.knownDetectedTarget.transform.position - m_EnemyController.weapon.transform.position).normalized);
+                break;
+            case AIState.AttackWall:
+                if(Vector3.Distance(transform.position,wallPos.position) > m_EnemyController.m_NavMeshAgent.stoppingDistance)
+                {
+                    m_EnemyController.SetNavDestination(wallPos.position);
+                }
+                
+                m_EnemyController.OrientTowards(wallPos.position);
+                if(Vector3.Distance(transform.position,wallPos.position) <= attackWallRange)
+                {
+                    m_EnemyController.TryAtack((wallPos.position - m_EnemyController.weapon.transform.position).normalized);
+                }
                 break;
         }
     }

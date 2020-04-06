@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject objectToSpawn;
     public Transform spawnPos;
+    public Transform spawnedEnemyWallPos;
 
     private ObjectiveKillSpawners objective;
     private Health health;
@@ -42,10 +43,12 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(lastSpawnTime + spawningRate < Time.time)
+        if (lastSpawnTime + spawningRate < Time.time)
         {
             var thing = Instantiate(objectToSpawn, spawnPos.position, spawnPos.rotation, null);
-            if(thing.GetComponent<RefreshSpawner>() != null)
+            thing.GetComponent<EnemyMobile>().wallPos = spawnedEnemyWallPos;
+
+            if (thing.GetComponent<RefreshSpawner>() != null)
             {
                 thing.GetComponent<RefreshSpawner>().spawner = this;
             }
