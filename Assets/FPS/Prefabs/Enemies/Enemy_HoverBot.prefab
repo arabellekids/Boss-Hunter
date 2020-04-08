@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3479417152427660001}
   - component: {fileID: 6149614305506352204}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ShadowProjector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 797398738606809810}
   - component: {fileID: 1614318205656627459}
   - component: {fileID: -7141435624305759282}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Enemy_HoverBot
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -230,8 +230,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 6
-  m_Acceleration: 8
+  m_Speed: 10
+  m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0.2
@@ -390,7 +390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2096565386399891227}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: GunMuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3175718064325614203}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: HealthBarPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 4657678879490380143}
   - component: {fileID: 168451937821874537}
   - component: {fileID: 862342350251935012}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 3253201880669482562}
   - component: {fileID: 2915308685551445665}
   - component: {fileID: 3804506681843464078}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: ImageBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 118020985647647040}
   - component: {fileID: 6023316067820363403}
   - component: {fileID: 1997026530960526579}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 8093968053717355754}
   - component: {fileID: 2104015986810675393}
   - component: {fileID: 2231955200838058728}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Weapon_EyeLazers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 8078929863353424972}
   - component: {fileID: 8865950977894298914}
   - component: {fileID: 5299349968446827641}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: ImageFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,7 +945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7332647584199454861}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: GunRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -975,7 +975,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6571005840976436832}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: WeaponRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,6 +1007,26 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
       propertyPath: m_Name
       value: BasicRobot
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1056,6 +1076,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: e029e430e913b374387843833ab0b593, type: 2}
+    - target: {fileID: 100028, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 13700004, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -1067,6 +1091,70 @@ PrefabInstance:
     - target: {fileID: 13700000, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
       propertyPath: m_CastShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100036, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e64c7aa328349d4ea713298f19a414f, type: 3}
@@ -1123,6 +1211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VFX_HitSparks (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523915449405344066, guid: 7593818fba43c7f4c8372299ce5e893f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
         type: 3}
@@ -1204,6 +1297,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_HitSparks (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6523915449405344066, guid: 7593818fba43c7f4c8372299ce5e893f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
         type: 3}
       propertyPath: looping
@@ -1284,6 +1382,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_AngrySteam
       objectReference: {fileID: 0}
+    - target: {fileID: 4134168188543666222, guid: f77e2130c96652640accf8b9f6990d6b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 878787690634796009, guid: f77e2130c96652640accf8b9f6990d6b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1358,6 +1461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VFX_HitSparks (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523915449405344066, guid: 7593818fba43c7f4c8372299ce5e893f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
         type: 3}
@@ -1438,6 +1546,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VFX_Alert
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855434715677272936, guid: 1bc9e4f49c67a6a41af3e7cb3d30bb43,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8855434715677272941, guid: 1bc9e4f49c67a6a41af3e7cb3d30bb43,
         type: 3}
@@ -1543,6 +1656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VFX_EnemyMuzzleFlash
+      objectReference: {fileID: 0}
+    - target: {fileID: 748781637555137343, guid: 3f5b545b9a1e74c418b061bba5bb9e2c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 264520514954343661, guid: 3f5b545b9a1e74c418b061bba5bb9e2c,
         type: 3}
@@ -1684,6 +1802,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_HitSparks
       objectReference: {fileID: 0}
+    - target: {fileID: 6523915449405344066, guid: 7593818fba43c7f4c8372299ce5e893f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7635230255058315795, guid: 7593818fba43c7f4c8372299ce5e893f,
         type: 3}
       propertyPath: looping
@@ -1763,6 +1886,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VFX_AngrySteam
+      objectReference: {fileID: 0}
+    - target: {fileID: 4134168188543666222, guid: f77e2130c96652640accf8b9f6990d6b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 878787690634796009, guid: f77e2130c96652640accf8b9f6990d6b,
         type: 3}

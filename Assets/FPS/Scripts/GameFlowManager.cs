@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameFlowManager : MonoBehaviour
 {
+    public Health coreHealth;
     [Header("Parameters")]
     [Tooltip("Duration of the fade-to-black at the end of the game")]
     public float endSceneLoadDelay = 3f;
@@ -67,7 +68,7 @@ public class GameFlowManager : MonoBehaviour
                 EndGame(true);
 
             // Test if player died
-            if (m_Player.isDead)
+            if (m_Player.isDead || coreHealth.currentHealth <= 0)
                 EndGame(false);
         }
     }

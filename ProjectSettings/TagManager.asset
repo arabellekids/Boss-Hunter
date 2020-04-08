@@ -19,9 +19,9 @@ TagManager:
   - PostProcessing
   - 
   - FirstPersonWeapon
-  - 
-  - 
-  - 
+  - Wall
+  - Player
+  - Enemy
   - 
   - 
   - 
