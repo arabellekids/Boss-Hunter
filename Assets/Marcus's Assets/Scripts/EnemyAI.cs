@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
     EnemyFunctions controller;
     Transform corePos;
     Transform targetPos = null;
+    
 
     float distToTarget = Mathf.Infinity;
 

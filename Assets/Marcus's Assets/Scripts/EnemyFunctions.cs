@@ -7,6 +7,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyFunctions : MonoBehaviour
 {
+    GameFlowManager manager;
     public WeaponController weapon;
     public float attackRange = 6;
     public float detectionRange = 8;
@@ -36,6 +37,7 @@ public class EnemyFunctions : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        manager = GameObject.FindObjectOfType<GameFlowManager>();
 
         health = GetComponent<Health>();
         health.onDie += OnDie;
@@ -66,6 +68,10 @@ public class EnemyFunctions : MonoBehaviour
 
     public bool TryAtack(Vector3 weaponForward)
     {
+        if (manager.gameIsEnding)
+        {
+            return false;
+        }
         // point weapon towards player
         weapon.transform.forward = weaponForward;
 
