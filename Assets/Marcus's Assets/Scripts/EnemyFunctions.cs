@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Events;
 
-[RequireComponent(typeof(Health))]
-public class Spawner : MonoBehaviour
+[RequireComponent(typeof(NavMeshAgent))]
+public class EnemyFunctions : MonoBehaviour
 {
-    public GameObject objectToSpawn;
-    public Transform spawnPos;
-    public Transform spawnedEnemyWallPos;
+    public WeaponController weapon;
+    public float attackRange = 6;
+    public float detectionRange = 8;
+    public float stopAttackingTargetTime = 5;
 
-    private ObjectiveKillSpawners objective;
-    private Health health;
-
-    public float spawningRate = 2;
-
+    [Header("VFX")]
+    [Tooltip("The VFX prefab spawned when the enemy dies")]
     public GameObject deathVFX;
     [Tooltip("The point at which the death VFX is spawned")]
     public Transform deathVFXSpawnPoint;
@@ -23,38 +23,31 @@ public class Spawner : MonoBehaviour
     public GameObject lootPrefab;
     [Tooltip("The chance the object has to drop")]
     [Range(0, 1)]
-    public float deathDuration = 0f;
-
     public float dropRate = 1f;
 
-    [HideInInspector]
-    public int totalObjectsSpawned;
-    private float lastSpawnTime = Mathf.NegativeInfinity;
+    public float deathDuration = 0f;
+
+    public UnityAction onAttack;
+
+    NavMeshAgent agent;
+    Health health;
+
     // Start is called before the first frame update
     void Awake()
     {
-        objective = FindObjectOfType<ObjectiveKillSpawners>();
-        objective.remainingSpawners++;
+        agent = GetComponent<NavMeshAgent>();
 
         health = GetComponent<Health>();
         health.onDie += OnDie;
+
+        weapon.owner = gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MoveTo(Vector3 pos)
     {
-        if (lastSpawnTime + spawningRate < Time.time)
-        {
-            var thing = Instantiate(objectToSpawn, spawnPos.position, spawnPos.rotation, null);
-
-            if (thing.GetComponent<RefreshSpawner>() != null)
-            {
-                thing.GetComponent<RefreshSpawner>().spawner = this;
-            }
-            totalObjectsSpawned++;
-            lastSpawnTime = Time.time;
-        }
+        agent.SetDestination(pos);
     }
+
     void OnDie()
     {
         // spawn a particle system when dying
@@ -66,11 +59,27 @@ public class Spawner : MonoBehaviour
         {
             Instantiate(lootPrefab, transform.position, Quaternion.identity);
         }
-        objective.remainingSpawners--;
-        objective.UpdateDescription();
+
         // this will call the OnDestroy function
         Destroy(gameObject, deathDuration);
     }
+
+    public bool TryAtack(Vector3 weaponForward)
+    {
+        // point weapon towards player
+        weapon.transform.forward = weaponForward;
+
+        // Shoot the weapon
+        bool didFire = weapon.HandleShootInputs(false, true, false);
+
+        if (didFire && onAttack != null)
+        {
+            onAttack.Invoke();
+        }
+
+        return didFire;
+    }
+
     public bool TryDropItem()
     {
         if (dropRate == 0 || lootPrefab == null)

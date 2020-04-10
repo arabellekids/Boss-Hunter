@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 267187357388336628}
   - component: {fileID: 267187357389630932}
   - component: {fileID: 267187357390630676}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Mesh_Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8713509023180013903}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 5036524435974543118}
   - component: {fileID: 8104922461031701881}
   - component: {fileID: 933769018646713397}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Projectile_Shotgun 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
