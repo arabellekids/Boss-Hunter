@@ -177,7 +177,7 @@ MonoBehaviour:
   impactSFXClip: {fileID: 0}
   hittableLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 30007
   speed: 300
   gravityDownAcceleration: 0
   trajectoryCorrectionDistance: 5

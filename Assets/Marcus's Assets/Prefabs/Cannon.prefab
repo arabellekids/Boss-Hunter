@@ -287,15 +287,15 @@ MonoBehaviour:
   shootType: 1
   projectilePrefab: {fileID: 528546716365072993, guid: 154bfb4989fe16d439e8f3fb7c20b72b,
     type: 3}
-  delayBetweenShots: 0.25
-  bulletSpreadAngle: 5
+  delayBetweenShots: 0.1
+  bulletSpreadAngle: 3
   bulletsPerShot: 2
   recoilForce: 1
   aimZoomRatio: 1
   aimOffset: {x: 0, y: 0, z: 0}
   ammoReloadRate: Infinity
   ammoReloadDelay: 0.6
-  maxAmmo: 15
+  maxAmmo: 100
   maxChargeDuration: 2
   ammoUsedOnStartCharge: 1
   ammoUsageRateWhileCharging: 2
@@ -615,6 +615,7 @@ GameObject:
   - component: {fileID: 4885768922309702975}
   - component: {fileID: 4885768922309702967}
   - component: {fileID: 4885768922309702953}
+  - component: {fileID: 5187186140549756106}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -630,8 +631,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4885768922309702974}
   m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.017, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4885768922271433977}
   - {fileID: 4885768921353226098}
@@ -719,7 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 4885768921803496389}
-  detectionSourcePoint: {fileID: 4885768922309702966}
+  detectionSourcePoint: {fileID: 4885768922098575447}
   selfDestructYHeight: -20
   pathReachingRadius: 2
   orientationSpeed: 10
@@ -783,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27364eefd6dd0341ba72a3bfc0d9727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 1000
   criticalHealthRatio: 0.3
 --- !u!114 &4885768922309702952
 MonoBehaviour:
@@ -869,3 +870,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 52.408577, y: 33.8026, z: 45.16449}
   m_Center: {x: -0.21615982, y: 16.898281, z: -5.866127}
+--- !u!114 &5187186140549756106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4885768922309702974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b0ce1bb69c96b49a7ac1098a7f5796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 1
+  sensibilityToSelfdamage: 0.5

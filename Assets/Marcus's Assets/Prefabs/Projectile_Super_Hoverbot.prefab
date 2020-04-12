@@ -96,6 +96,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -176,7 +177,7 @@ MonoBehaviour:
   impactSFXClip: {fileID: 0}
   hittableLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 23863
   speed: 100
   gravityDownAcceleration: 0
   trajectoryCorrectionDistance: 5

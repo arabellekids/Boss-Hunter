@@ -108,7 +108,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     {
         // shoot handling
         WeaponController activeWeapon = GetActiveWeapon();
-
+        
         if (activeWeapon && m_WeaponSwitchState == WeaponSwitchState.Up)
         {
             // handle aiming down sights
@@ -226,6 +226,7 @@ public class PlayerWeaponsManager : MonoBehaviour
                 activeWeaponIndex = m_WeaponSwitchNewWeaponIndex;
 
                 WeaponController newWeapon = GetWeaponAtSlotIndex(m_WeaponSwitchNewWeaponIndex);
+
                 if (onSwitchedToWeapon != null)
                 {
                     onSwitchedToWeapon.Invoke(newWeapon);

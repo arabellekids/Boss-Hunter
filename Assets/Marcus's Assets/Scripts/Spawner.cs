@@ -69,7 +69,8 @@ public class Spawner : MonoBehaviour
         objective.remainingSpawners--;
         objective.UpdateDescription();
         // this will call the OnDestroy function
-        Destroy(gameObject, deathDuration);
+        health.currentHealth = 0;
+        gameObject.SetActive(false);
     }
     public bool TryDropItem()
     {
