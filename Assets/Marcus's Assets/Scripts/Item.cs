@@ -11,6 +11,7 @@ public class Item : MonoBehaviour
     public TextMeshProUGUI itemsToSellText;
     public Transform rewrdPos;
     public Seller seller;
+    public int itemIndex = 0;
 
     ScrapManager manager;
     // Start is called before the first frame update
@@ -23,11 +24,11 @@ public class Item : MonoBehaviour
     void Update()
     {
         itemsToSellText.text = itemText;
-        if(seller.selling && Input.GetButtonDown("BuyItem") && manager.currentScraps - cost >= 0)
+        if(seller.selling && Input.GetButtonDown("BuyItem") && manager.currentScraps - cost >= 0 && seller.currentItem == itemIndex)
         {
             Buy();
         }
-        else if(manager.currentScraps - cost < 0 && seller.selling && Input.GetButtonDown("BuyItem"))
+        else if(manager.currentScraps - cost < 0 && seller.selling && Input.GetButtonDown("BuyItem") && seller.currentItem == itemIndex)
         {
             Instantiate(seller.failedBuy);
         }

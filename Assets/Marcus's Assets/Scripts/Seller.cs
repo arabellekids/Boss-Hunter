@@ -9,6 +9,8 @@ public class Seller : MonoBehaviour
 {
     Interactable interactable;
     public GameObject SellerUI;
+    public int currentItem = 1;
+    public int maxItems = 1;
 
     public bool selling = false;
 
@@ -28,6 +30,18 @@ public class Seller : MonoBehaviour
         if (selling && Input.GetButtonDown("ExitSeller"))
         {
             Exit();
+        }
+        if (Input.GetButtonDown("CycleItems"))
+        {           
+            currentItem += (int)Input.GetAxis("CycleItems");
+        }
+        if(currentItem > maxItems)
+        {
+            currentItem = 0;
+        }
+        if(currentItem < 0)
+        {
+            currentItem = maxItems;
         }
     }
 
