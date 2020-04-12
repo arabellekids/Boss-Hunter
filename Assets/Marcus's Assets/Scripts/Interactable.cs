@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     public UnityAction onInteract;
+    public UnityAction onExit;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -14,5 +15,9 @@ public class Interactable : MonoBehaviour
         {
             onInteract.Invoke();
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        onExit.Invoke();
     }
 }

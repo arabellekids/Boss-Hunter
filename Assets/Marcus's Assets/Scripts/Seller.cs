@@ -12,35 +12,37 @@ public class Seller : MonoBehaviour
 
     public bool selling = false;
 
+    public GameObject failedBuy;
     // Start is called before the first frame update
     void Start()
     {
         interactable = GetComponent<Interactable>();
         interactable.onInteract += Interact;
+        interactable.onExit += Exit;
 
         SellerUI.SetActive(false);
     }
 
     private void Update()
     {
-        if(selling && Input.GetButtonDown(""))
+        if (selling && Input.GetButtonDown("ExitSeller"))
+        {
+            Exit();
+        }
     }
 
     void Interact()
     {
         SellerUI.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        selling = true;
         //Time.timeScale = 0;
+        Debug.Log("interacting");
+        selling = true;
     }
     public void Exit()
     {
         SellerUI.SetActive(false);
-        Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Time.timeScale = 1;
+        Debug.Log("exiting");
         selling = false;
-        Time.timeScale = 1;
     }
 }

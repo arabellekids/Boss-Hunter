@@ -23,15 +23,20 @@ public class Item : MonoBehaviour
     void Update()
     {
         itemsToSellText.text = itemText;
-        if(seller.selling && Input.GetButtonDown("BuyItem"))
+        if(seller.selling && Input.GetButtonDown("BuyItem") && manager.currentScraps - cost >= 0)
         {
             Buy();
+        }
+        else if(manager.currentScraps - cost < 0 && seller.selling && Input.GetButtonDown("BuyItem"))
+        {
+            Instantiate(seller.failedBuy);
         }
     }
     public void Buy()
     {
-        seller.Exit();
         manager.currentScraps -= cost;
         Instantiate(item, rewrdPos.position, rewrdPos.rotation, rewrdPos);
+        seller.Exit();
+        Debug.Log("buying");
     }
 }
