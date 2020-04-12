@@ -616,6 +616,7 @@ GameObject:
   - component: {fileID: 4885768922309702967}
   - component: {fileID: 4885768922309702953}
   - component: {fileID: 5187186140549756106}
+  - component: {fileID: 8335924925363640955}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -884,3 +885,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageMultiplier: 1
   sensibilityToSelfdamage: 0.5
+--- !u!114 &8335924925363640955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4885768922309702974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddeb3976c20d0834d82a1736d8241829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrapsToGive: 15

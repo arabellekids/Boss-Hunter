@@ -7,6 +7,7 @@ TagManager:
   - Weapon
   - DisplayMessage
   - Message
+  - GameManager
   layers:
   - Default
   - TransparentFX
