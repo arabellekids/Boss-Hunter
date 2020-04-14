@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6636d680e1fe248a849a61112a7a25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoPacks: 2
+  ammoPacks: 4
   ammoReloadRate: 8
   ammoReloadDelay: 1
   infiniteAmmo: 0

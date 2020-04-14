@@ -7,7 +7,10 @@ using System;
 [RequireComponent(typeof(Interactable))]
 public class Seller : MonoBehaviour
 {
+    [Header("Item Database")]
     public Item[] items;
+
+    [Header("Seller variables")]
     public Transform itemBoughtPos;
     public GameObject shopUI;
     public GameObject failedBuy;
@@ -70,13 +73,12 @@ public class Seller : MonoBehaviour
     void OpenShop()
     {
         shopUI.SetActive(true);
-        //Time.timeScale = 0;
         Debug.Log("interacting");
     }
     public void ExitShop()
     {
         shopUI.SetActive(false);
-        //Time.timeScale = 1;
+        currentItemIndex = 0;
         Debug.Log("exiting");
     }
     void BuyItem(int index)
