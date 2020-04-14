@@ -361,8 +361,8 @@ InputManager:
     m_Name: NextWeapon
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: e
-    positiveButton: q
+    negativeButton: 
+    positiveButton: 
     altNegativeButton: joystick button 2
     altPositiveButton: joystick button 3
     gravity: 1000
@@ -425,8 +425,8 @@ InputManager:
     m_Name: CycleItems
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: r
-    positiveButton: t
+    negativeButton: q
+    positiveButton: e
     altNegativeButton: 
     altPositiveButton: joystick button 1
     gravity: 1000

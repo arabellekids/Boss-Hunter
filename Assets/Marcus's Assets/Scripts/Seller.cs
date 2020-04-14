@@ -7,56 +7,88 @@ using System;
 [RequireComponent(typeof(Interactable))]
 public class Seller : MonoBehaviour
 {
-    Interactable interactable;
-    public GameObject SellerUI;
-    public int currentItem = 1;
-    public int maxItems = 1;
-
-    public bool selling = false;
-
+    public Item[] items;
+    public Transform itemBoughtPos;
+    public GameObject shopUI;
     public GameObject failedBuy;
+
+    Interactable interactable;
+    ScrapManager manager;
+
+    public int currentItemIndex = 1;
     // Start is called before the first frame update
     void Start()
     {
         interactable = GetComponent<Interactable>();
-        interactable.onInteract += Interact;
-        interactable.onExit += Exit;
+        interactable.onInteract += OpenShop;
+        interactable.onExit += ExitShop;
 
-        SellerUI.SetActive(false);
+        manager = FindObjectOfType<ScrapManager>();
+
+        shopUI.SetActive(false);
     }
 
     private void Update()
     {
-        if (selling && Input.GetButtonDown("ExitSeller"))
+        if (shopUI.activeSelf && Input.GetButtonDown("ExitSeller"))
         {
-            Exit();
+            ExitShop();
         }
         if (Input.GetButtonDown("CycleItems"))
-        {           
-            currentItem += (int)Input.GetAxis("CycleItems");
-        }
-        if(currentItem > maxItems)
         {
-            currentItem = 0;
+            if(Input.GetAxis("CycleItems") > 0)
+            {
+                currentItemIndex++;
+                if (currentItemIndex >= items.Length)
+                {
+                    currentItemIndex = 0;
+                }
+            }
+            if (Input.GetAxis("CycleItems") < 0)
+            {
+                currentItemIndex--;
+                if (currentItemIndex < 0)
+                {
+                    currentItemIndex = items.Length - 1;
+                }
+            }
         }
-        if(currentItem < 0)
+
+        if (Input.GetButtonDown("BuyItem"))
         {
-            currentItem = maxItems;
+            BuyItem(currentItemIndex);
         }
+
+        foreach(Item item in items)
+        {
+            item.itemUIImage.color = item.defaultColor;
+        }
+
+        items[currentItemIndex].itemUIImage.color = items[currentItemIndex].selectedColor;
     }
 
-    void Interact()
+    void OpenShop()
     {
-        SellerUI.SetActive(true);
+        shopUI.SetActive(true);
         //Time.timeScale = 0;
         Debug.Log("interacting");
-        selling = true;
     }
-    public void Exit()
+    public void ExitShop()
     {
-        SellerUI.SetActive(false);
+        shopUI.SetActive(false);
         //Time.timeScale = 1;
         Debug.Log("exiting");
-        selling = false;
+    }
+    void BuyItem(int index)
+    {
+        if(manager.currentScraps - items[index].cost >= 0)
+        {
+            manager.currentScraps -= items[index].cost;
+            Instantiate(items[index].item, itemBoughtPos.position, itemBoughtPos.rotation, itemBoughtPos);
+        }
+        else if(GameObject.FindGameObjectsWithTag("Message").Length == 0)
+        {
+            Instantiate(failedBuy);
+        }
     }
 }
