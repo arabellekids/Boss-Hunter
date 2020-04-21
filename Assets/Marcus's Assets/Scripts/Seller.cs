@@ -73,13 +73,11 @@ public class Seller : MonoBehaviour
     void OpenShop()
     {
         shopUI.SetActive(true);
-        Debug.Log("interacting");
     }
     public void ExitShop()
     {
         shopUI.SetActive(false);
         currentItemIndex = 0;
-        Debug.Log("exiting");
     }
     void BuyItem(int index)
     {

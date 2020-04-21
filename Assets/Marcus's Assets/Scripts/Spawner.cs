@@ -9,7 +9,6 @@ public class Spawner : MonoBehaviour
     public Transform spawnPos;
     public Transform spawnedEnemyWallPos;
 
-    private ObjectiveKillSpawners objective;
     private Health health;
 
     public float spawningRate = 2;
@@ -31,11 +30,8 @@ public class Spawner : MonoBehaviour
     public int totalObjectsSpawned;
     private float lastSpawnTime = Mathf.NegativeInfinity;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        objective = FindObjectOfType<ObjectiveKillSpawners>();
-        objective.remainingSpawners++;
-
         health = GetComponent<Health>();
         health.onDie += OnDie;
     }
@@ -66,8 +62,6 @@ public class Spawner : MonoBehaviour
         {
             Instantiate(lootPrefab, transform.position, Quaternion.identity);
         }
-        objective.remainingSpawners--;
-        objective.UpdateDescription();
         // this will call the OnDestroy function
         health.currentHealth = 0;
         gameObject.SetActive(false);
