@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1782308769794513487}
   - component: {fileID: 1782308769794513484}
   - component: {fileID: 1197375894}
+  - component: {fileID: 2602125856109584133}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -148,6 +149,21 @@ MonoBehaviour:
   spawner: {fileID: 8772937310315897438}
   respawnTime: 30
   timeOfDeath: -Infinity
+--- !u!114 &2602125856109584133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782308769794513483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b7698ec50c85c44a849a968dc1d57d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  compassMarkerPrefab: {fileID: 8886675824904341945, guid: 5fc35673fabae1c41af84446998a065a,
+    type: 3}
+  textDirection: 
 --- !u!1 &3195677614327639783
 GameObject:
   m_ObjectHideFlags: 0

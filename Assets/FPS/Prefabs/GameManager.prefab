@@ -1544,7 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f92ab5a15d6b814a9b6d3c24c41405a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScraps: 1000
+  currentScraps: 0
   scrapText: {fileID: 1430624728}
 --- !u!114 &1315839542190839936
 MonoBehaviour:

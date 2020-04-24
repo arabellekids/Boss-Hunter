@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddeb3976c20d0834d82a1736d8241829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrapsToGive: 5
+  scrapsToGive: 3
 --- !u!1 &2201913640410082181
 GameObject:
   m_ObjectHideFlags: 0
